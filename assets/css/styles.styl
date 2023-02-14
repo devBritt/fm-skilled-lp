@@ -85,10 +85,15 @@ a
   font-sizing(btn-text-m[0], btn-text-m[1], btn-text-m[2])
 
 // component styles
+body
+  height 100%
+  background-image linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(236, 100%, 97%) 60%)
+  background-repeat no-repeat
+  background-attachment fixed
+
 main
-  background-image linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(236, 100%, 97%) 75%)
   margin-top 2rem
-  padding 0 1rem
+  padding 0 1rem 4rem 1rem
 
 nav
   display flex
@@ -134,7 +139,7 @@ button
 
 .category-card
   background-color white
-  margin-bottom 3rem
+  margin-top 3rem
   padding 0 1.25rem 1.25rem 1.25rem
   border-radius(10px)
   box-shadow 0px 25px 50px rgba(6, 22, 141, 0.0442381)
@@ -154,3 +159,30 @@ button
 
 .category-name
   margin-bottom 1.1rem
+
+// MEDIA QUERIES
+// tablets
+@media screen and (min-width 768px)
+  main
+    padding 0rem 2rem 4rem 2rem
+
+  #category-cards
+    display grid
+    grid-template-columns 1fr 1fr
+
+  .category-card:nth-child(odd)
+    margin-right 1.5rem
+
+// laptops/desktops
+@media screen and (min-width 1200px)
+  main
+    padding 0rem 5rem 4rem 5rem
+
+  #category-cards
+    grid-template-columns 1fr 1fr 1fr
+
+  .category-card
+    &:nth-child(n)
+      margin-right 0
+    &:not(:nth-child(3n))
+      margin-right 1.5rem
