@@ -96,6 +96,12 @@ nav
   align-items center
   padding 1rem
 
+#tagline
+  margin-bottom 1.75rem
+
+.desc-text
+  margin-bottom 1.5rem
+
 footer
   width 100%
   display flex
@@ -116,6 +122,7 @@ button
     background-color light-blue
 
 .bg-grad-main
+  padding 0.75rem 1.75rem
   background-image gradient-main
   &:hover
     background gradient-hover, gradient-main
@@ -127,3 +134,20 @@ button
 
 .category-card
   background-color white
+  padding 1.5rem
+  border-radius(10px)
+
+.feature
+  background-image gradient-main
+  & >h2
+    color white
+
+.category-icon
+  width 54px
+  height 54px
+  position relative
+  top -(@height/2)
+  left (@width/2)
+
+.category-name
+  margin-bottom 1.1rem
