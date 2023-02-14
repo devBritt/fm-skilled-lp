@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+p,
+a,
+button,
+h1,
+h2,
+h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-wrap: break-word;
+}
+h1,
+h2,
+h3 {
+  color: #13183f;
+}
+p {
+  color: #84879a;
+}
+a.text-btn {
+  color: #f7457d;
+}
+a.text-btn:hover {
+  color: #ffa8c4;
+}
+h1 {
+  font-size: 40px;
+  line-height: 51px;
+  font-weight: 800;
+}
+h2 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 800;
+}
+h3 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 800;
+}
+button {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 700;
+}
+a {
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700;
+}
+main {
+  background-image: linear-gradient(180deg, #fff 0%, #f0f1ff 75%);
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #13183f;
+  padding: 1rem;
+}
+button {
+  color: #fff;
+  border: none;
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  border-radius: 32px;
+  padding: 0.5rem 1.5rem;
+}
+.btn-solid {
+  background-color: #13183f;
+}
+.btn-solid:hover {
+  background-color: #666ca3;
+}
+.bg-grad-main {
+  background-image: linear-gradient(180deg, #f028a7 0.04%, #ff6f47 100%);
+}
+.bg-grad-main:hover {
+  background: linear-gradient(180deg, rgba(255,255,255,0.5), rgba(255,255,255,0.5)), linear-gradient(180deg, #f028a7 0.04%, #ff6f47 100%);
+}
+.bg-grad-secondary {
+  background-image: linear-gradient(180deg, #4751ff 0%, #f028a7 99.92%);
+}
+.bg-grad-secondary:hover {
+  background: linear-gradient(180deg, rgba(255,255,255,0.5), rgba(255,255,255,0.5)), linear-gradient(180deg, #4751ff 0%, #f028a7 99.92%);
+}
+.category-card {
+  background-color: #fff;
+}

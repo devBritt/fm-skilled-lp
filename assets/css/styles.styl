@@ -1,0 +1,129 @@
+// variables
+  light-blue = hsl(234, 25%, 52%)
+  dark-blue = hsl(233, 54%, 16%)
+  skilled-gray = hsl(232, 10%, 56%)
+  hot-pink = hsl(341, 92%, 62%)
+  light-pink = hsl(341, 100%, 83%)
+  gradient-main = linear-gradient(180deg, hsl(322, 87%, 55%) 0.04%, hsl(13, 100%, 64%) 100%)
+  gradient-secondary = linear-gradient(180deg, hsl(237, 100%, 64%) 0%, hsl(322, 87%, 55%) 99.92%)
+  gradient-hover = linear-gradient(180deg, hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 100%, 0.5))
+  // font sizing arrays
+  // @index 0 = font size
+  // @index 1 = line height
+  heading-xl = 56px, 70px, 800
+  heading-l = 40px, 51px, 800
+  heading-m = 32px, 40px, 800
+  heading-s = 24px, 32px, 800
+  heading-xs = 20px, 28px, 800
+  body-m = 18px, 28px, 500
+  body-s = 16px, 26px, 500
+  btn-text-m = 18px, 28px, 700
+  btn-text-s = 16px, 26px, 700
+
+  // mixins
+border-radius(n)
+  -webkit-border-radius n
+  -moz-border-radius n
+  border-radius n
+
+font-sizing(size, height, weight)
+  font-size size
+  line-height height
+  font-weight weight
+
+// global reset
+*
+*::before
+*::after
+  box-sizing border-box
+
+*
+  margin 0
+
+html
+body
+  height 100%
+
+body
+  -webkit-font-smoothing antialiased
+
+img
+  display block
+  max-width 100%
+
+// typography styles
+// prevent text overflow
+p, a, button, h1, h2, h3
+  font-family 'Plus Jakarta Sans', sans-serif
+  overflow-wrap break-word
+
+h1, h2, h3
+  color dark-blue
+
+p
+  color skilled-gray
+
+a.text-btn
+  color hot-pink
+  &:hover
+    color light-pink
+
+h1
+  font-sizing(heading-l[0], heading-l[1], heading-l[2])
+
+h2
+  font-sizing(heading-s[0], heading-s[1], heading-s[2])
+
+h3
+  font-sizing(heading-xs[0], heading-xs[1], heading-xs[2])
+
+button
+  font-sizing(btn-text-s[0], btn-text-s[1], btn-text-s[2])
+
+a
+  text-decoration none
+  font-sizing(btn-text-m[0], btn-text-m[1], btn-text-m[2])
+
+// component styles
+main
+  background-image linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(236, 100%, 97%) 75%)
+  margin-top 2rem
+  padding 0 1rem
+
+nav
+  display flex
+  justify-content space-between
+  align-items center
+  padding 1rem
+
+footer
+  width 100%
+  display flex
+  justify-content space-between
+  align-items center
+  background-color dark-blue
+  padding 1rem
+
+button
+  color white
+  border none
+  border-radius(32px)
+  padding 0.5rem 1.5rem
+
+.btn-solid
+  background-color dark-blue
+  &:hover
+    background-color light-blue
+
+.bg-grad-main
+  background-image gradient-main
+  &:hover
+    background gradient-hover, gradient-main
+
+.bg-grad-secondary
+  background-image gradient-secondary
+  &:hover
+    background gradient-hover, gradient-secondary
+
+.category-card
+  background-color white
