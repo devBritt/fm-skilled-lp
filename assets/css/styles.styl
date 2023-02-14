@@ -7,9 +7,29 @@
   gradient-main = linear-gradient(180deg, hsl(322, 87%, 55%) 0.04%, hsl(13, 100%, 64%) 100%)
   gradient-secondary = linear-gradient(180deg, hsl(237, 100%, 64%) 0%, hsl(322, 87%, 55%) 99.92%)
   gradient-hover = linear-gradient(180deg, hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 100%, 0.5))
+  // font sizing arrays
+  // @index 0 = font size
+  // @index 1 = line height
+  heading-xl = 56px, 70px, 800
+  heading-l = 40px, 51px, 800
+  heading-m = 32px, 40px, 800
+  heading-s = 24px, 32px, 800
+  heading-xs = 20px, 28px, 800
+  body-m = 18px, 28px, 500
+  body-s = 16px, 26px, 500
+  btn-text-m = 18px, 28px, 700
+  btn-text-s = 16px, 26px, 700
 
   // mixins
+border-radius(n)
+  -webkit-border-radius n
+  -moz-border-radius n
+  border-radius n
 
+font-sizing(size, height, weight)
+  font-size size
+  line-height height
+  font-weight weight
 
 // global reset
 *
@@ -31,7 +51,36 @@ img
   display block
   max-width 100%
 
+// typography styles
 // prevent text overflow
-p, h1, h2, h3, h4, h5, h6
+p, a, button, h1, h2, h3
   font-family 'Plus Jakarta Sans', sans-serif
   overflow-wrap break-word
+
+h1, h2, h3
+  color dark-blue
+
+p
+  color light-blue
+
+a.text-btn
+  color hot-pink
+
+button
+  color white
+
+h1
+  font-sizing(heading-l[0], heading-l[1], heading-l[2])
+
+h2
+  font-sizing(heading-s[0], heading-s[1], heading-s[2])
+
+h3
+  font-sizing(heading-xs[0], heading-xs[1], heading-xs[2])
+
+button
+  font-sizing(btn-text-s[0], btn-text-s[1], btn-text-s[2])
+
+a
+  text-decoration none
+  font-sizing(btn-text-m[0], btn-text-m[1], btn-text-m[2])
